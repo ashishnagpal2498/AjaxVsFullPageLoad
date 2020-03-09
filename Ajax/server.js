@@ -1,13 +1,16 @@
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser')
+const path = require("path")
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(express.static('./public_static'));
+app.use(express.static(path.join(__dirname,'public_static')));
 
+// Concentrate on this part of server
 app.post('/data',(req,res)=>{
+
     // 1. The data which is received by server in body of request
     console.log('request',req.body);
 

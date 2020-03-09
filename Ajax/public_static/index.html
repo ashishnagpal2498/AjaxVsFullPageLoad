@@ -7,10 +7,13 @@
 </head>
 <body>
 <h1>Full Page Load</h1> <!-- Heading Will remain same -->
-<form > <!-- No need to provide method and action as request is send through AJAX technique -->
-    <input type="text" placeholder="Enter text">
+<form onsubmit="formSubmit(event)"> <!-- No need to provide method and action as request is send through AJAX technique -->
+    <input type="text" name="text" placeholder="Enter text">
     <br>
     <button type="submit">Submit</button>
 </form>
+<ul id="list-items">
+
+</ul>
 </body>
 </html>

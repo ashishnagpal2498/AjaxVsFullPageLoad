@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+const path = require("path")
 const bodyParser = require('body-parser')
 
 
@@ -14,8 +15,10 @@ function generateList(){
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static('./public_static'));
 
+app.use(express.static(path.join(__dirname,'public_static')));
+
+// Concentrate on this part of the server
 app.get('/data',(req,res)=>{
     // 1. The data which is received by server in body of request - Check Console in terminal -
     console.log('request',req.body);
@@ -35,8 +38,10 @@ app.get('/data',(req,res)=>{
               </ul>
               `);
 
-    // 4. Comment the lines 27-36 and uncomment lines below , see the change
-    //     res.send({data:dataItems})
+    // 4. Comment the lines 27-36 and uncomment line below , see the change
+         //  res.send({data:dataItems})
+                // Explanation - The object is send which has "data" as "KEY" and "array" as "value"
+                // retype the url to localhost:3005 and again enter some text
 });
 
 
