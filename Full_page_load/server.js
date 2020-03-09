@@ -31,6 +31,7 @@ app.get('/data',(req,res)=>{
               <form action="/data" method="get">
               <input type="text" name="text" placeholder="Enter text">
               <br>
+              <br>
               <button type="submit">Submit</button>
               </form>
               <ul>

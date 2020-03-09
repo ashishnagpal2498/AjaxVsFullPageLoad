@@ -13,32 +13,35 @@
 * Clone the repository
 * Change the terminal to that repository
 * Open the project in some editor (VSCode type  `code .` )
+* run the command `npm install` in the terminal
+* Work with two types of project one by one
 
-##### Full Load page
-* type command `npm run-script fullLoad`
-* Go to web Browser and type `http://localhost:3005`
-* You will se a heading, Input box and a submit button.
-* Try entering a text and submit.
-* Open the folder Full_page_load -
-* then make the changes as per guided by the server.js File
-* To close the server press Ctrl+C and then Y
+* ##### Full Load page
+  * type command `npm run-script fullLoad`
+  * Go to web Browser and type `http://localhost:3005`
+  * You will see a heading, Input box and a submit button.
+  * Try entering a text and submit.
+  * Open the folder Full_page_load -
+  * then make the changes as per guided by the **server.js** file to understand the flow
+  * To close the server press `Ctrl+C` and then `Y`
+  
+  * ###### Points which shows full page is Loaded -
+    * `console.log('Full Load Page for first time')` prints only once
+    * Heading has been changed
 
-##### Points which shows full page is Loaded -
-- console.log('Full Load Page for first time') runs only once
-- Heading has been changed
 
+* ##### AJAX
+  * type command `npm run-script ajax`
+  * Go to web Browser and type `http://localhost:3005`
+  * You will see a heading, Input box and a submit button.
+  * Try entering a text and submit.
+  * Open the folder Ajax -
+  * then make the changes as per guided by the **index.js** file in **public_static** folder and **server.js** file gradually to understand the flow.
 
-##### AJAX
-* type command `npm run-script ajax`
-* Go to web Browser and type `http://localhost:3005`
-* You will se a heading, Input box and a submit button.
-* Try entering a text and submit.
-* Open the folder Ajax -
-* then make the changes as per guided by the index.js file in public_static folder and server.js File
 
 ##### Points To remember 
 - Only single node.js server will run at a time so make sure to run one at a time.
-- try putting console.log() at different places in JS files.
+- try to put `console.log()` at different places in JS files.
 - Make changes gradually to understand the concept.
 - Whatever is send by the server the Browser treats it as an HTML object and displays as it is.
 
