@@ -1,0 +1,19 @@
+{
+  "name": "ajaxvsfullpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ajax": "node ./Ajax/server.js",
+    "fullLoad": "node ./Full_page_load/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
