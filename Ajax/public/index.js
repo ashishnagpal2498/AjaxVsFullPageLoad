@@ -1,4 +1,3 @@
-// let dataItems = [];
 function formSubmit(e) {
     //1. To prevent the default action of form submit -
     // Comment preventDefault and see
@@ -16,23 +15,27 @@ function formSubmit(e) {
     data.append( "text", "hello" );
 
     //3. Send the request to server
-    fetch('/data',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({text:text})
-    }).then((res)=>{
-        //4. Response Object -
-        return res.json();
-    }).then((dataObj)=> {
-        //5. receives the response from server
-        console.log('data',dataObj);
+    fetch('/data',
+        {
+                method: 'POST',
+                headers:
+                    {
+                        'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify({text:text})
+            }
+            ).then( (res) => {
+            //4. Response Object -
+            return res.json();
 
-        let liElement = document.createElement('li');
-        liElement.textContent = dataObj.data;
-        list.append(liElement);
-    })
+            }).then((dataObj)=> {
 
+                //5. receives the response from server
+                console.log('data',dataObj);
+
+                let liElement = document.createElement('li');
+                liElement.textContent = dataObj.data;
+                list.append(liElement);
+            })
 
 }

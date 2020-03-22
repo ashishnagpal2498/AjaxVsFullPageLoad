@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 // Concentrate on this part of the server
 app.get('/data',(req,res)=>{
+
     // 1. The data which is received by server in body of request - Check Console in terminal -
     console.log('request',req.body);
 
