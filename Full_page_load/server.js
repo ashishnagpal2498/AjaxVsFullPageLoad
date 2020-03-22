@@ -16,7 +16,7 @@ function generateList(){
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(express.static(path.join(__dirname,'public_static')));
+app.use(express.static(path.join(__dirname,'public')));
 
 // Concentrate on this part of the server
 app.get('/data',(req,res)=>{
